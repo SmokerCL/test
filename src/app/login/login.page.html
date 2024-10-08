@@ -6,17 +6,18 @@
 
 <ion-content [fullscreen]="true">
 
-  <ion-item>
-    <ion-label position="floating">CORREO</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
+  <form (ngSubmit)="login()">
+    <ion-item>
+      <ion-label position="floating">RUT</ion-label>
+      <ion-input [(ngModel)]="rutEmpleado" name="rutEmpleado" type="text" required></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">CONTRASEÑA</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="contrasena" name="contrasena" type="password" required></ion-input>
+    </ion-item>
 
-  <ion-button href="trabajadores" class="ion-padding" color="primary">ACCEDER</ion-button>
-  <ion-button class="ion-padding" color="primary">Registrarse</ion-button>
+    <ion-button expand="full" type="submit">Iniciar Sesión</ion-button>
+  </form>
   
 </ion-content>
